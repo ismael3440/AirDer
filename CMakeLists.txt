@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.10)
+project(AirDer)
+set(CMAKE_CXX_STANDARD 11)
+find_package(Curses REQUIRED)
+add_executable(game src/main.cpp)
+target_link_libraries(game PRIVATE ${CURSES_LIBRARIES})
+target_include_directories(game PRIVATE ${CURSES_INCLUDE_DIRS})
